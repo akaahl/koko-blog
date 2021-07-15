@@ -8,6 +8,7 @@
 
 body {
   font-family: "Quicksand", sans-serif;
+  background: #fdffe7;
 }
 
 h1 {
@@ -22,11 +23,12 @@ h1 {
   align-items: center;
   justify-content: space-between;
 
-  span {
+  .logo {
     font-family: "Quicksand", sans-serif;
     font-size: 2rem;
     font-weight: 700;
     color: salmon;
+    text-decoration: none;
   }
 
   ul {
@@ -72,7 +74,7 @@ header {
       width: 100%;
       line-height: 1.5;
       text-align: center;
-      font-weight: 500;
+      font-weight: 600;
       color: #555;
     }
   }
