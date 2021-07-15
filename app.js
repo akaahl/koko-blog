@@ -21,7 +21,10 @@ app.use(express.urlencoded({ extended: true }));
 // view engine
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => res.render("home"));
-app.get("/about", (req, res) => res.render("about"));
+app.get("/", (req, res) => res.render("home", { title: "Home" }));
+app.get("/about", (req, res) => res.render("about", { title: "About" }));
+
+// error routes
+app.use((req, res) => res.status(404).render("404", { title: "404 Error" }));
 
 app.listen(3000);
