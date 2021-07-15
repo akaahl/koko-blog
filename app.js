@@ -26,5 +26,3 @@ app.get("/about", (req, res) => res.render("about", { title: "About" }));
 
 // error routes
 app.use((req, res) => res.status(404).render("404", { title: "404 Error" }));
-
-app.listen(3000);
