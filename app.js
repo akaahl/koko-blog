@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const blogRoutes = require("./routes/blogRoutes");
 
 // connect to mongodb
 const dbURI =
@@ -26,6 +27,9 @@ app.get("/about", (req, res) => res.render("about", { title: "About" }));
 app.get("/new-blog", (req, res) =>
   res.render("blogs/create", { title: "Create a new blog" })
 );
+
+// blog routes
+app.use("/", blogRoutes);
 
 // error routes
 app.use((req, res) => res.status(404).render("404", { title: "404 Error" }));
