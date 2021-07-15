@@ -1,0 +1,21 @@
+<%- include('../partials/navbar') %>
+
+<div class="create-blog">
+  <h1>Create a new blog</h1>
+  <form action="/">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required autocomplete="off" />
+    <label for="snippet">Snippet:</label>
+    <input
+      type="text"
+      id="snippet"
+      name="snippet"
+      required
+      autocomplete="off"
+    />
+    <label for="body">Body:</label>
+    <!-- <input type="text" id="body" name="body" required autocomplete="off" /> -->
+    <textarea name="body" id="body" cols="30" rows="10"></textarea>
+    <button class="btn">Submit</button>
+  </form>
+</div>

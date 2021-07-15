@@ -23,6 +23,9 @@ app.set("view engine", "ejs");
 
 app.get("/", (req, res) => res.render("home", { title: "Home" }));
 app.get("/about", (req, res) => res.render("about", { title: "About" }));
+app.get("/new-blog", (req, res) =>
+  res.render("blogs/create", { title: "Create a new blog" })
+);
 
 // error routes
 app.use((req, res) => res.status(404).render("404", { title: "404 Error" }));
