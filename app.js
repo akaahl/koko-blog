@@ -32,8 +32,9 @@ app.get("/", (req, res) => {
     .catch((err) => console.log(err));
 });
 app.get("/about", (req, res) => res.render("about", { title: "About" }));
-app.get("/new-blog", (req, res) =>
-  res.render("blogs/create", { title: "Create a new blog" })
+
+app.get("/details", (req, res) =>
+  res.render("blogs/details", { title: "Blog details" })
 );
 
 // blog routes
