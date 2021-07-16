@@ -5,8 +5,7 @@ const blogRoutes = require("./routes/blogRoutes");
 const Blog = require("./models/blog");
 
 // connect to mongodb
-const dbURI =
-  "mongodb+srv://useradmin:test12345@cluster0.gjwao.mongodb.net/koko-blog?retryWrites=true&w=majority";
+const dbURI = `mongodb+srv://${process.env.DB_USERNAME_PW}@cluster0.gjwao.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
