@@ -81,6 +81,28 @@ main .intro-content p {
   font-size: 1.2rem;
   line-height: 1.5;
 }
+main .blogs-content {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 2rem;
+}
+main .blogs-content section {
+  padding: 2rem;
+  background: #fab57a;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+main .blogs-content section:hover {
+  box-shadow: 0px 0px 5px #555;
+}
+main .blogs-content section h3,
+main .blogs-content section p {
+  text-align: center;
+}
+main .blogs-content section p {
+  margin-top: 1rem;
+}
 
 .error-message {
   text-align: center;

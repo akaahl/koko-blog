@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const blogRoutes = require("./routes/blogRoutes");
+const Blog = require("./models/blog");
 
 // connect to mongodb
 const dbURI =
@@ -22,7 +23,14 @@ app.use(express.urlencoded({ extended: true }));
 // view engine
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => res.render("home", { title: "Home" }));
+app.get("/", (req, res) => {
+  // res.render("home", { title: "Home" });
+  Blog.find()
+    .then((result) => {
+      res.render("home", { title: "Home", blogs: result });
+    })
+    .catch((err) => console.log(err));
+});
 app.get("/about", (req, res) => res.render("about", { title: "About" }));
 app.get("/new-blog", (req, res) =>
   res.render("blogs/create", { title: "Create a new blog" })

@@ -92,6 +92,33 @@ main {
       line-height: 1.5;
     }
   }
+
+  .blogs-content {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 2rem;
+
+    section {
+      padding: 2rem;
+      background: #fab57a;
+      border-radius: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0px 0px 5px #555;
+      }
+
+      h3,
+      p {
+        text-align: center;
+      }
+
+      p {
+        margin-top: 1rem;
+      }
+    }
+  }
 }
 
 .error-message {

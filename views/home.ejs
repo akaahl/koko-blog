@@ -7,4 +7,15 @@
     <p>Here you may find a list of my blogs.</p>
     <p>Hope you enjoy reading them, as much as I do writing them.</p>
   </div>
+
+  <div class="blogs-content">
+    <% if (blogs.length) { %> <% blogs.map(blog => { %>
+    <section class="blog">
+      <h3><%= blog.title %></h3>
+      <p><%= blog.snippet %></p>
+    </section>
+    <% }) %> <% } else { %>
+    <p>Currently, there are no blogs to display.</p>
+    <% }%>
+  </div>
 </main>
