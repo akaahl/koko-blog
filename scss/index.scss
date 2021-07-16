@@ -216,4 +216,21 @@ main {
     line-height: 1.5;
     font-size: 1.1rem;
   }
+
+  button {
+    display: block;
+    margin: 3rem auto 0;
+    border: none;
+    background: rgb(250, 59, 59);
+    color: whitesmoke;
+    padding: 0.8rem 1.2rem;
+    border-radius: 1.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
 }

@@ -188,5 +188,20 @@ main .blogs-content a p {
   line-height: 1.5;
   font-size: 1.1rem;
 }
+.details-content button {
+  display: block;
+  margin: 3rem auto 0;
+  border: none;
+  background: #fa3b3b;
+  color: whitesmoke;
+  padding: 0.8rem 1.2rem;
+  border-radius: 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.details-content button:active {
+  transform: scale(0.95);
+}
 
 /*# sourceMappingURL=index.css.map */
