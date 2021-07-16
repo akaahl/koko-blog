@@ -99,11 +99,13 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 2rem;
 
-    section {
+    a {
       padding: 2rem;
       background: #fab57a;
       border-radius: 2rem;
       cursor: pointer;
+      text-decoration: none;
+      color: none;
 
       &:hover {
         box-shadow: 0px 0px 5px #555;
@@ -112,6 +114,7 @@ main {
       h3,
       p {
         text-align: center;
+        color: black;
       }
 
       p {
@@ -196,5 +199,21 @@ main {
         transform: scale(0.95);
       }
     }
+  }
+}
+
+.details-content {
+  padding: 0 8rem;
+  margin-top: 4rem;
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  p {
+    margin-top: 2rem;
+    line-height: 1.5;
+    font-size: 1.1rem;
   }
 }

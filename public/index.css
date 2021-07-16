@@ -87,20 +87,23 @@ main .blogs-content {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 2rem;
 }
-main .blogs-content section {
+main .blogs-content a {
   padding: 2rem;
   background: #fab57a;
   border-radius: 2rem;
   cursor: pointer;
+  text-decoration: none;
+  color: none;
 }
-main .blogs-content section:hover {
+main .blogs-content a:hover {
   box-shadow: 0px 0px 5px #555;
 }
-main .blogs-content section h3,
-main .blogs-content section p {
+main .blogs-content a h3,
+main .blogs-content a p {
   text-align: center;
+  color: black;
 }
-main .blogs-content section p {
+main .blogs-content a p {
   margin-top: 1rem;
 }
 
@@ -170,6 +173,20 @@ main .blogs-content section p {
 }
 .create-blog form button:active {
   transform: scale(0.95);
+}
+
+.details-content {
+  padding: 0 8rem;
+  margin-top: 4rem;
+}
+.details-content h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+.details-content p {
+  margin-top: 2rem;
+  line-height: 1.5;
+  font-size: 1.1rem;
 }
 
 /*# sourceMappingURL=index.css.map */

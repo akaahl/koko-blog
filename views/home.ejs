@@ -10,10 +10,12 @@
 
   <div class="blogs-content">
     <% if (blogs.length) { %> <% blogs.map(blog => { %>
-    <section class="blog">
+
+    <a href="/<%= blog._id %>">
       <h3><%= blog.title %></h3>
-      <p><%= blog.snippet %></p>
-    </section>
+      <p><%= blog.snippet %></p></a
+    >
+
     <% }) %> <% } else { %>
     <p>Currently, there are no blogs to display.</p>
     <% }%>
