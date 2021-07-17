@@ -5,9 +5,9 @@ const blogRoutes = require("./routes/blogRoutes");
 const Blog = require("./models/blog");
 const dotenv = require("dotenv");
 
-// connect to mongodb
 dotenv.config();
 
+// connect to mongodb
 const dbUsernamePw = process.env.DB_USERNAME_PW;
 const dbName = process.env.DB_NAME;
 
@@ -29,13 +29,9 @@ app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  // res.render("home", { title: "Home" });
-  Blog.find()
-    .then((result) => {
-      res.render("home", { title: "Home", blogs: result });
-    })
-    .catch((err) => console.log(err));
+  res.redirect("/blogs");
 });
+
 app.get("/about", (req, res) => res.render("about", { title: "About" }));
 
 app.get("/details", (req, res) =>
