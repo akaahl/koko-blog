@@ -3,9 +3,15 @@ const app = express();
 const mongoose = require("mongoose");
 const blogRoutes = require("./routes/blogRoutes");
 const Blog = require("./models/blog");
+const dotenv = require("dotenv");
 
 // connect to mongodb
-const dbURI = `mongodb+srv://${process.env.DB_USERNAME_PW}@cluster0.gjwao.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+dotenv.config();
+
+const dbUsernamePw = process.env.DB_USERNAME_PW;
+const dbName = process.env.DB_NAME;
+
+const dbURI = `mongodb+srv://${dbUsernamePw}@cluster0.gjwao.mongodb.net/${dbName}?retryWrites=true&w=majority`;
 
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
